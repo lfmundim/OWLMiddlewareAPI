@@ -1,0 +1,10 @@
+/home/amanthul/Documents/Projects/OWLMiddleware/bin/Debug/netcoreapp2.0/OWLMiddleware.deps.json
+/home/amanthul/Documents/Projects/OWLMiddleware/bin/Debug/netcoreapp2.0/OWLMiddleware.runtimeconfig.json
+/home/amanthul/Documents/Projects/OWLMiddleware/bin/Debug/netcoreapp2.0/OWLMiddleware.runtimeconfig.dev.json
+/home/amanthul/Documents/Projects/OWLMiddleware/bin/Debug/netcoreapp2.0/OWLMiddleware.dll
+/home/amanthul/Documents/Projects/OWLMiddleware/bin/Debug/netcoreapp2.0/OWLMiddleware.pdb
+/home/amanthul/Documents/Projects/OWLMiddleware/obj/Debug/netcoreapp2.0/OWLMiddleware.csproj.CoreCompileInputs.cache
+/home/amanthul/Documents/Projects/OWLMiddleware/obj/Debug/netcoreapp2.0/OWLMiddleware.AssemblyInfoInputs.cache
+/home/amanthul/Documents/Projects/OWLMiddleware/obj/Debug/netcoreapp2.0/OWLMiddleware.AssemblyInfo.cs
+/home/amanthul/Documents/Projects/OWLMiddleware/obj/Debug/netcoreapp2.0/OWLMiddleware.dll
+/home/amanthul/Documents/Projects/OWLMiddleware/obj/Debug/netcoreapp2.0/OWLMiddleware.pdb
