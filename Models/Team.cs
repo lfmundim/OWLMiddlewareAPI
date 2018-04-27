@@ -60,7 +60,7 @@ namespace OWLMiddleware.Models
         public long Advantage { get; set; }
 
         [JsonProperty("ranking")]
-        public Ranking Ranking { get; set; }
+        public Record Ranking { get; set; }
 
         [JsonProperty("schedule")]
         public Schedule[] Schedule { get; set; }

@@ -21,13 +21,25 @@ namespace OWLMiddleware.Controllers
         }
         
         [HttpPost, Route("lastmatchup")]
-        public async Task<string> GetLastMatchup([FromBody] MatchupRequest request)
+        public async Task<Schedule> GetLastMatchup([FromBody] MatchupRequest request)
         {
-            var team = await _owlApiService.GetTeamAsync(Convert.ToInt32(request.firstTeamId));
+            var team = await _owlApiService.GetTeamAsync(request.firstTeamId);
             var concludedMatches = GetConcludedMatches(team);
             var lastMatchup = GetLastMatchup(concludedMatches, request.secondTeamId);
-            return JsonConvert.SerializeObject(lastMatchup);
+            // return JsonConvert.SerializeObject(lastMatchup);
+            return lastMatchup;
         }
+
+        [HttpPost, Route("nextmatch")]
+        public async Task<Schedule> GetNextMatch([FromBody] MatchRequest request)
+        {
+            var team = await _owlApiService.GetTeamAsync(request.teamId);
+            var futureMatches = GetFutureMatches(team);
+            var nextMatch = futureMatches.FirstOrDefault();
+            return nextMatch;
+        }
+
+        private static Schedule[] GetFutureMatches(Team team) => team.Schedule.Where(t => t.State.Equals("PENDING")).OrderBy(s => s.EndDate).ToArray();
 
         private static Schedule[] GetConcludedMatches(Team team) => team.Schedule.Where(t => t.State.Equals("CONCLUDED")).OrderBy(s => s.EndDate).ToArray();
 

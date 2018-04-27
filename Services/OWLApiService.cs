@@ -9,5 +9,8 @@ namespace OWLMiddleware.Services
     {
         [Get("teams/{id}")]
         Task<Team> GetTeamAsync([Path("id")]int id);
+
+        [Get("rankings")]
+        Task<Ranking> GetRankingAsync([Path("id")]int id);
     }
 }

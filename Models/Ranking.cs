@@ -1,40 +1,59 @@
+// To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
+//
+//    using OWLMiddleware.Models;
+//
+//    var ranking = Ranking.FromJson(jsonString);
+using System;
+using System.Collections.Generic;
+using System.Globalization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace OWLMiddleware.Models
 {
+
     public partial class Ranking
     {
-        [JsonProperty("matchWin")]
-        public long MatchWin { get; set; }
+        [JsonProperty("content")]
+        public Content[] Content { get; set; }
 
-        [JsonProperty("matchLoss")]
-        public long MatchLoss { get; set; }
+        [JsonProperty("totalMatches")]
+        public long TotalMatches { get; set; }
 
-        [JsonProperty("matchDraw")]
-        public long MatchDraw { get; set; }
+        [JsonProperty("matchesConcluded")]
+        public long MatchesConcluded { get; set; }
 
-        [JsonProperty("matchBye")]
-        public long MatchBye { get; set; }
+        [JsonProperty("playoffCutoff")]
+        public long PlayoffCutoff { get; set; }
+    }
 
-        [JsonProperty("gameWin")]
-        public long GameWin { get; set; }
+    public partial class Content
+    {
+        [JsonProperty("competitor")]
+        public Team Competitor { get; set; }
 
-        [JsonProperty("gameLoss")]
-        public long GameLoss { get; set; }
+        [JsonProperty("placement")]
+        public long Placement { get; set; }
 
-        [JsonProperty("gameTie")]
-        public long GameTie { get; set; }
+        [JsonProperty("advantage")]
+        public long Advantage { get; set; }
 
-        [JsonProperty("gamePointsFor")]
-        public long GamePointsFor { get; set; }
+        [JsonProperty("records")]
+        public Record[] Records { get; set; }
+    }
 
-        [JsonProperty("gamePointsAgainst")]
-        public long GamePointsAgainst { get; set; }
+    public partial class Division
+    {
+        [JsonProperty("competitor")]
+        public DivisionClass Competitor { get; set; }
 
-        [JsonProperty("streak")]
-        public string Streak { get; set; }
+        [JsonProperty("division")]
+        public DivisionClass DivisionDivision { get; set; }
+    }
 
-        [JsonProperty("streakNum")]
-        public long StreakNum { get; set; }
+    public partial class DivisionClass
+    {
+        [JsonProperty("id")]
+        public long Id { get; set; }
     }
 }
