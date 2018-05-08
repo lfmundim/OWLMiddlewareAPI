@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using OWLMiddleware.Models.Responses;
+using OWLMiddleware.Models.Requests;
 
 namespace OWLMiddleware.Controllers
 {
@@ -21,17 +23,17 @@ namespace OWLMiddleware.Controllers
         }
         
         [HttpPost, Route("lastmatchup")]
-        public async Task<Schedule> GetLastMatchup([FromBody] MatchupRequest request)
+        public async Task<ScheduleResponse> GetLastMatchup([FromBody] MatchupRequest request)
         {
             var team = await _owlApiService.GetTeamAsync(request.firstTeamId);
             var concludedMatches = GetConcludedMatches(team);
             var lastMatchup = GetLastMatchup(concludedMatches, request.secondTeamId);
-            // return JsonConvert.SerializeObject(lastMatchup);
+            
             return lastMatchup;
         }
 
         [HttpPost, Route("nextmatch")]
-        public async Task<Schedule> GetNextMatch([FromBody] MatchRequest request)
+        public async Task<ScheduleResponse> GetNextMatch([FromBody] MatchRequest request)
         {
             var team = await _owlApiService.GetTeamAsync(request.teamId);
             var futureMatches = GetFutureMatches(team);
@@ -39,10 +41,18 @@ namespace OWLMiddleware.Controllers
             return nextMatch;
         }
 
-        private static Schedule[] GetFutureMatches(Team team) => team.Schedule.Where(t => t.State.Equals("PENDING")).OrderBy(s => s.EndDate).ToArray();
+        [HttpPost, Route("divisionteams")]
+        public async Task<List<CompetitorElement>> GetTeamsByDivision([FromBody] TeamRequest request){
+            var allTeams = await _owlApiService.GetTeamsAsync();
+            var competitors = allTeams.Competitors;
+            var divisionteams = competitors.Where(t => t.Competitor.OwlDivision == (int)request.divisionId);
+            return divisionteams.ToList();
+        }
 
-        private static Schedule[] GetConcludedMatches(Team team) => team.Schedule.Where(t => t.State.Equals("CONCLUDED")).OrderBy(s => s.EndDate).ToArray();
+        private static ScheduleResponse[] GetFutureMatches(TeamResponse team) => team.Schedule.Where(t => t.State.Equals("PENDING")).OrderBy(s => s.StartDate).ToArray();
 
-        private static Schedule GetLastMatchup(Schedule[] concludedMatches, int opponentId) => concludedMatches.Where(m => m.Competitors[1].Id == opponentId || m.Competitors[0].Id == opponentId).ToArray().Last();
+        private static ScheduleResponse[] GetConcludedMatches(TeamResponse team) => team.Schedule.Where(t => t.State.Equals("CONCLUDED")).OrderBy(s => s.StartDate).ToArray();
+
+        private static ScheduleResponse GetLastMatchup(ScheduleResponse[] concludedMatches, int opponentId) => concludedMatches.Where(m => m.Competitors[1].Id == opponentId || m.Competitors[0].Id == opponentId).ToArray().Last();
     }
 }

@@ -1,16 +1,13 @@
 using Newtonsoft.Json;
 
-namespace OWLMiddleware.Models
+namespace OWLMiddleware.Models.Requests
 {
-    public partial class Account
+    public partial class AccountResponse
     {
         [JsonProperty("value")]
         public string Value { get; set; }
 
         [JsonProperty("accountType")]
         public string AccountType { get; set; }
-
-        [JsonProperty("isPublic")]
-        public bool IsPublic { get; set; }
     }
 }

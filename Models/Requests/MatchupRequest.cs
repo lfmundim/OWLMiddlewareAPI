@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace OWLMiddleware.Models
+namespace OWLMiddleware.Models.Requests
 {
     public partial class MatchupRequest
     {

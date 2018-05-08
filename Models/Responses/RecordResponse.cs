@@ -1,8 +1,8 @@
 using Newtonsoft.Json;
 
-namespace OWLMiddleware.Models
+namespace OWLMiddleware.Models.Responses
 {
-    public partial class Record
+    public partial class RecordResponse
     {
         [JsonProperty("matchWin")]
         public long MatchWin { get; set; }

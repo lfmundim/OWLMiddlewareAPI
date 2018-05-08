@@ -1,16 +1,21 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using OWLMiddleware.Models;
+using OWLMiddleware.Models.Responses;
 using RestEase;
+using static OWLMiddleware.Models.Enumerations;
 
 namespace OWLMiddleware.Services
 {
+    //actual OWL-API
     public interface IOWLApiService
     {
         [Get("teams/{id}")]
-        Task<Team> GetTeamAsync([Path("id")]int id);
+        Task<TeamResponse> GetTeamAsync([Path("id")]int id);
+
+        [Get("teams")]
+        Task<TeamsResponse> GetTeamsAsync();
 
         [Get("rankings")]
-        Task<Ranking> GetRankingAsync([Path("id")]int id);
+        Task<RankingResponse> GetRankingAsync();
     }
 }
