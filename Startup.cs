@@ -49,6 +49,7 @@ namespace OWLMiddleware
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
+                c.RoutePrefix = "";
                 c.SwaggerEndpoint("../swagger/v1/swagger.json", "OWLeague Filter V0.1");
             });
 
