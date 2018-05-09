@@ -9,10 +9,15 @@ using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using OWLMiddleware.Models.Responses;
 using OWLMiddleware.Models.Requests;
+using static OWLMiddleware.Models.Enumerations;
 
 namespace OWLMiddleware.Controllers
 {
+    /// <summary>
+    /// Controller responsible for AI calls.
+    /// </summary>
     [Route("team")]
+    [Produces("application/json")]
     public class TeamController : Controller
     {
         private readonly IOWLApiService _owlApiService;
@@ -21,7 +26,21 @@ namespace OWLMiddleware.Controllers
         {
             _owlApiService = owlApiService;
         }
-        
+
+        /// <summary>
+        /// Gets last matchup between two teams, by their ID
+        /// </summary>
+        /// /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /team/lastmatchup
+        ///     {
+        ///        "firstTeamId":4523,
+        ///        "secondTeamId":4408
+        ///     }
+        /// </remarks>
+        /// <param name="request"></param>
+        /// <returns>Serialized JSON with the filtered OWL-API Response.</returns>
         [HttpPost, Route("lastmatchup")]
         public async Task<ScheduleResponse> GetLastMatchup([FromBody] MatchupRequest request)
         {
@@ -32,6 +51,19 @@ namespace OWLMiddleware.Controllers
             return lastMatchup;
         }
 
+        /// <summary>
+        /// Gets next team match, by its ID
+        /// </summary>
+        /// /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /team/nextmatch
+        ///     {
+        ///        "teamId":4523
+        ///     }
+        /// </remarks>
+        /// <param name="request"></param>
+        /// <returns>Serialized JSON with the filtered OWL-API Response.</returns>
         [HttpPost, Route("nextmatch")]
         public async Task<ScheduleResponse> GetNextMatch([FromBody] MatchRequest request)
         {
@@ -41,11 +73,24 @@ namespace OWLMiddleware.Controllers
             return nextMatch;
         }
 
-        [HttpPost, Route("divisionteams")]
-        public async Task<List<CompetitorElement>> GetTeamsByDivision([FromBody] TeamRequest request){
+        /// <summary>
+        /// Gets all teams from a division, from its ID
+        /// </summary>
+        /// /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /team/divisionteams
+        ///     {
+        ///        "divisionId":79
+        ///     }
+        /// </remarks>
+        /// <param name="request"></param>
+        /// <returns>Serialized JSON with the filtered OWL-API Response.</returns>
+        [HttpGet, Route("divisionteams/{divisionId}")]
+        public async Task<List<CompetitorElement>> GetTeamsByDivision(DivisionIds divisionId){
             var allTeams = await _owlApiService.GetTeamsAsync();
             var competitors = allTeams.Competitors;
-            var divisionteams = competitors.Where(t => t.Competitor.OwlDivision == (int)request.divisionId);
+            var divisionteams = competitors.Where(t => t.Competitor.OwlDivision == (int)divisionId);
             return divisionteams.ToList();
         }
 

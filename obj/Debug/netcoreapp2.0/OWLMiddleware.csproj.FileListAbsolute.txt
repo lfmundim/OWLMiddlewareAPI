@@ -8,3 +8,15 @@
 /home/amanthul/Documents/Projects/OWLMiddleware/obj/Debug/netcoreapp2.0/OWLMiddleware.AssemblyInfo.cs
 /home/amanthul/Documents/Projects/OWLMiddleware/obj/Debug/netcoreapp2.0/OWLMiddleware.dll
 /home/amanthul/Documents/Projects/OWLMiddleware/obj/Debug/netcoreapp2.0/OWLMiddleware.pdb
+E:\Lucas\Documents\Git\OWLMiddlewareApi\bin\Debug\netcoreapp2.0\OWLMiddleware.deps.json
+E:\Lucas\Documents\Git\OWLMiddlewareApi\bin\Debug\netcoreapp2.0\OWLMiddleware.runtimeconfig.json
+E:\Lucas\Documents\Git\OWLMiddlewareApi\bin\Debug\netcoreapp2.0\OWLMiddleware.runtimeconfig.dev.json
+E:\Lucas\Documents\Git\OWLMiddlewareApi\bin\Debug\netcoreapp2.0\OWLMiddleware.dll
+E:\Lucas\Documents\Git\OWLMiddlewareApi\bin\Debug\netcoreapp2.0\OWLMiddleware.pdb
+E:\Lucas\Documents\Git\OWLMiddlewareApi\obj\Debug\netcoreapp2.0\OWLMiddleware.csprojResolveAssemblyReference.cache
+E:\Lucas\Documents\Git\OWLMiddlewareApi\obj\Debug\netcoreapp2.0\OWLMiddleware.csproj.CoreCompileInputs.cache
+E:\Lucas\Documents\Git\OWLMiddlewareApi\obj\Debug\netcoreapp2.0\OWLMiddleware.AssemblyInfoInputs.cache
+E:\Lucas\Documents\Git\OWLMiddlewareApi\obj\Debug\netcoreapp2.0\OWLMiddleware.AssemblyInfo.cs
+E:\Lucas\Documents\Git\OWLMiddlewareApi\obj\Debug\netcoreapp2.0\OWLMiddleware.dll
+E:\Lucas\Documents\Git\OWLMiddlewareApi\obj\Debug\netcoreapp2.0\OWLMiddleware.pdb
+E:\Lucas\Documents\Git\OWLMiddlewareApi\bin\Debug\netcoreapp2.0\OWLMiddleware.xml
