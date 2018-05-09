@@ -18,6 +18,7 @@
     <PackageReference Include="RestEase" Version="1.4.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="2.4.0" />
+    <PackageReference Include="Take.Blip.Client" Version="0.5.11" />
   </ItemGroup>
 
   <ItemGroup>

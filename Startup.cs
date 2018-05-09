@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Lime.Protocol.Serialization.Newtonsoft;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -28,8 +29,15 @@ namespace OWLMiddleware
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(options =>
+                 {
+                     foreach (var settingsConverter in JsonNetSerializer.Settings.Converters)
+                     {
+                         options.SerializerSettings.Converters.Add(settingsConverter);
+                     }
+                 });;
             services.AddSingleton(RestClient.For<IOWLApiService>("https://api.overwatchleague.com"));
+            services.AddSingleton<ICarouselService, CarouselService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "OWLeague Filter", Version = "v0.1" });

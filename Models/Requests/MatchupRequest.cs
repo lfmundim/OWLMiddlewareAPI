@@ -8,5 +8,7 @@ namespace OWLMiddleware.Models.Requests
         public int firstTeamId { get; set; }
         [JsonProperty("secondTeam")]
         public int secondTeamId { get; set; }
+        [JsonProperty("blipFormat")]
+        public bool blipFormat { get; set; }
     }
 }

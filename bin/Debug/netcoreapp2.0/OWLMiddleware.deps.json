@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "0228a7fa6a62bfb7004192794ca8fb0f72e88633"
+    "signature": "4de49a8094f9eff32a447dff6f2b64a32e195b07"
   },
   "compilationOptions": {
     "defines": [
@@ -28,7 +28,8 @@
           "Microsoft.NETCore.App": "2.0.0",
           "RestEase": "1.4.4",
           "Swashbuckle.AspNetCore": "2.4.0",
-          "Swashbuckle.AspNetCore.Swagger": "2.4.0"
+          "Swashbuckle.AspNetCore.Swagger": "2.4.0",
+          "Take.Blip.Client": "0.5.11"
         },
         "runtime": {
           "OWLMiddleware.dll": {}
@@ -173,6 +174,63 @@
             "rid": "win-x86",
             "assetType": "native"
           }
+        }
+      },
+      "Lime.Messaging/0.7.197": {
+        "dependencies": {
+          "Lime.Protocol": "0.7.197",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Lime.Messaging.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.1/Lime.Messaging.dll": {}
+        }
+      },
+      "Lime.Protocol/0.7.197": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "System.Buffers": "4.4.0",
+          "System.Diagnostics.TraceSource": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Threading.Tasks.Dataflow": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Lime.Protocol.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/Lime.Protocol.dll": {}
+        }
+      },
+      "Lime.Protocol.Serialization/0.7.197": {
+        "dependencies": {
+          "Lime.Protocol": "0.7.197",
+          "NETStandard.Library": "2.0.0",
+          "Newtonsoft.Json": "10.0.2",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Lime.Protocol.Serialization.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/Lime.Protocol.Serialization.dll": {}
+        }
+      },
+      "Lime.Transport.Tcp/0.7.197": {
+        "dependencies": {
+          "Lime.Protocol": "0.7.197",
+          "Lime.Protocol.Serialization": "0.7.197",
+          "NETStandard.Library": "2.0.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.Security": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Lime.Transport.Tcp.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/Lime.Transport.Tcp.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/2.4.0": {
@@ -2647,6 +2705,19 @@
           }
         }
       },
+      "SmartFormat.Net/2.1.0.2": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/SmartFormat.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/SmartFormat.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.7": {
         "dependencies": {
           "SQLitePCLRaw.core": "1.1.7",
@@ -3012,6 +3083,29 @@
           "Microsoft.NETCore.Platforms": "2.0.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Diagnostics.TraceSource/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
         }
       },
       "System.Diagnostics.Tracing/4.3.0": {
@@ -3517,6 +3611,13 @@
           }
         }
       },
+      "System.Runtime.Loader/4.3.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Runtime.Numerics/4.3.0": {
         "dependencies": {
           "System.Globalization": "4.3.0",
@@ -3883,6 +3984,21 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Threading.Tasks.Dataflow/4.7.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
       "System.Threading.Tasks.Extensions/4.4.0": {},
       "System.Threading.Tasks.Parallel/4.3.0": {
         "dependencies": {
@@ -4009,6 +4125,39 @@
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath": "4.3.0"
+        }
+      },
+      "Take.Blip.Client/0.5.11": {
+        "dependencies": {
+          "Lime.Messaging": "0.7.197",
+          "Lime.Protocol": "0.7.197",
+          "Lime.Protocol.Serialization": "0.7.197",
+          "Lime.Transport.Tcp": "0.7.197",
+          "Microsoft.Extensions.Caching.Memory": "2.0.1",
+          "Microsoft.Extensions.DependencyModel": "2.0.3",
+          "SmartFormat.Net": "2.1.0.2",
+          "System.ComponentModel": "4.3.0",
+          "System.Diagnostics.TraceSource": "4.3.0",
+          "System.Runtime.Loader": "4.3.0",
+          "Takenet.Iris.Messaging": "1.8.521"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Take.Blip.Client.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/Take.Blip.Client.dll": {}
+        }
+      },
+      "Takenet.Iris.Messaging/1.8.521": {
+        "dependencies": {
+          "Lime.Protocol": "0.7.197",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Takenet.Iris.Messaging.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/Takenet.Iris.Messaging.dll": {}
         }
       },
       "WindowsAzure.Storage/8.1.4": {
@@ -4264,6 +4413,34 @@
       "sha512": "sha512-GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "path": "libuv/1.10.0",
       "hashPath": "libuv.1.10.0.nupkg.sha512"
+    },
+    "Lime.Messaging/0.7.197": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d7VCZGWjj9etiO2k1GLPIPxtvu0EK1dK7g6KCRh280CjJv1O0yv35OMm+qW1AC1kFsBhuJquAC/Pttp+wVayOA==",
+      "path": "lime.messaging/0.7.197",
+      "hashPath": "lime.messaging.0.7.197.nupkg.sha512"
+    },
+    "Lime.Protocol/0.7.197": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hQoU8GB1Qd9Ui+pz4+fx39jisiWXWsC62DlLBtIbgT8OAtR8XR/frOmHl/Z9f+kKc2ckOVy/Rk0/hWDTcMGPBw==",
+      "path": "lime.protocol/0.7.197",
+      "hashPath": "lime.protocol.0.7.197.nupkg.sha512"
+    },
+    "Lime.Protocol.Serialization/0.7.197": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jDDlMdmoWfHffAODZ4aFvfzGdZdiNg4fA/rpZG63gipVmjzCKv2bAUR8UsWbMnJBRYmNAUKxJ4s8ft4veFVbog==",
+      "path": "lime.protocol.serialization/0.7.197",
+      "hashPath": "lime.protocol.serialization.0.7.197.nupkg.sha512"
+    },
+    "Lime.Transport.Tcp/0.7.197": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xbl4EUIHh+NROVqwIPtPjo1KFxxtmN12JTIfV7BXz6mJGlMDWklH66Kb9oZQm2ZBd9Ss55pjQz0B2p/NeAyR+w==",
+      "path": "lime.transport.tcp/0.7.197",
+      "hashPath": "lime.transport.tcp.0.7.197.nupkg.sha512"
     },
     "Microsoft.ApplicationInsights/2.4.0": {
       "type": "package",
@@ -5567,6 +5744,13 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
+    "SmartFormat.Net/2.1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wy4Brh8IAz9pMgzGZdMGJS1j+ABGegATEnj7OzFyB8I9Qt6guseijNOkpOW31iiOc4nvqdj2VuKF+gXoiWDVgg==",
+      "path": "smartformat.net/2.1.0.2",
+      "hashPath": "smartformat.net.2.1.0.2.nupkg.sha512"
+    },
     "SQLitePCLRaw.bundle_green/1.1.7": {
       "type": "package",
       "serviceable": true,
@@ -5783,6 +5967,13 @@
       "sha512": "sha512-UUvkJfSYJMM6x527dJg2VyWPSRqIVB0Z7dbjHst1zmwTXz5CcXSYJFWRpuigfbO1Lf7yfZiIaEUesfnl/g5EyA==",
       "path": "system.diagnostics.tools/4.3.0",
       "hashPath": "system.diagnostics.tools.4.3.0.nupkg.sha512"
+    },
+    "System.Diagnostics.TraceSource/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VnYp1NxGx8Ww731y2LJ1vpfb/DKVNKEZ8Jsh5SgQTZREL/YpWRArgh9pI8CDLmgHspZmLL697CaLvH85qQpRiw==",
+      "path": "system.diagnostics.tracesource/4.3.0",
+      "hashPath": "system.diagnostics.tracesource.4.3.0.nupkg.sha512"
     },
     "System.Diagnostics.Tracing/4.3.0": {
       "type": "package",
@@ -6057,6 +6248,13 @@
       "path": "system.runtime.interopservices.runtimeinformation/4.3.0",
       "hashPath": "system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512"
     },
+    "System.Runtime.Loader/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DHMaRn8D8YCK2GG2pw+UzNxn/OHVfaWx7OTLBD/hPegHZZgcZh3H6seWegrC4BYwsfuGrywIuT+MQs+rPqRLTQ==",
+      "path": "system.runtime.loader/4.3.0",
+      "hashPath": "system.runtime.loader.4.3.0.nupkg.sha512"
+    },
     "System.Runtime.Numerics/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -6225,6 +6423,13 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
+    "System.Threading.Tasks.Dataflow/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wcKLDI8tN5KpcMcTQwXfcLHrFdfINIxDBOZS3rE8QqOds/0fRhCkR+IEfQokxT7s/Yluqk+LG/ZqZdQmA/xgCw==",
+      "path": "system.threading.tasks.dataflow/4.7.0",
+      "hashPath": "system.threading.tasks.dataflow.4.7.0.nupkg.sha512"
+    },
     "System.Threading.Tasks.Extensions/4.4.0": {
       "type": "package",
       "serviceable": true,
@@ -6308,6 +6513,20 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Take.Blip.Client/0.5.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yOTQnEQwrvXeIGT3jHzNwIHnjVcYdrGbnXkD9lAFSlqmrWAEp4BJxi3FVwHeV3mW3/sJW+kBy48qQ3T4Ah/maw==",
+      "path": "take.blip.client/0.5.11",
+      "hashPath": "take.blip.client.0.5.11.nupkg.sha512"
+    },
+    "Takenet.Iris.Messaging/1.8.521": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ihdd0n5c4yXJlOtjQfywMIsA5h4yvhY0Yy6VoRzem5Nu+1SMWjjhd0EUGux8geMvDALceX3MQ1P1oiC7/zEtcQ==",
+      "path": "takenet.iris.messaging/1.8.521",
+      "hashPath": "takenet.iris.messaging.1.8.521.nupkg.sha512"
     },
     "WindowsAzure.Storage/8.1.4": {
       "type": "package",
