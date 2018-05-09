@@ -13138,33 +13138,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/amanthul/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Lucas\\Documents\\Git\\OWLMiddlewareApi\\OWLMiddleware.csproj",
+      "projectUniqueName": "/home/amanthul/Documents/Projects/OWLMiddleware/OWLMiddleware.csproj",
       "projectName": "OWLMiddleware",
-      "projectPath": "E:\\Lucas\\Documents\\Git\\OWLMiddlewareApi\\OWLMiddleware.csproj",
-      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "E:\\Lucas\\Documents\\Git\\OWLMiddlewareApi\\obj\\",
+      "projectPath": "/home/amanthul/Documents/Projects/OWLMiddleware/OWLMiddleware.csproj",
+      "packagesPath": "/home/amanthul/.nuget/packages/",
+      "outputPath": "/home/amanthul/Documents/Projects/OWLMiddleware/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "/home/amanthul/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
