@@ -111,6 +111,7 @@ namespace OWLMiddleware.Services
             {
                 foreach(GameResponse g in match.Games)
                 {
+                    // TODO convert string names into "real names"
                     text += "->" + g.Attributes.Map;
                 }
             }

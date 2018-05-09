@@ -52,8 +52,10 @@ namespace OWLMiddleware.Controllers
             var team = await _owlApiService.GetTeamAsync(request.firstTeamId);
             var concludedMatches = GetConcludedMatches(team);
             var lastMatchup = GetLastMatchup(concludedMatches, request.secondTeamId);
-            
-            return Ok(lastMatchup);
+            if(request.blipFormat)
+                return Ok(_carouselService.CreateMatchCarousel(lastMatchup));
+            else
+                return Ok(lastMatchup);
         }
 
         /// <summary>
