@@ -40,7 +40,7 @@ namespace OWLMiddleware
             services.AddSingleton<ICarouselService, CarouselService>();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "OWLeague Filter", Version = "v0.1" });
+                c.SwaggerDoc("v1", new Info { Title = "OWLeague Filter", Version = "v0.5" });
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
@@ -58,7 +58,7 @@ namespace OWLMiddleware
             app.UseSwaggerUI(c =>
             {
                 c.RoutePrefix = "";
-                c.SwaggerEndpoint("../swagger/v1/swagger.json", "OWLeague Filter V0.1");
+                c.SwaggerEndpoint("../swagger/v1/swagger.json", "OWLeague Filter V0.5");
             });
 
             app.UseMvc();

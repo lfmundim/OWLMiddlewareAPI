@@ -30,6 +30,9 @@ namespace OWLMiddleware.Models.Responses
 
         [JsonProperty("thumbnail")]
         public Thumbnail Thumbnail { get; set; }
+
+        [JsonProperty("defaultUrl")]
+        public string DefaultUrl { get; set; }
     }
 
     public partial class Thumbnail

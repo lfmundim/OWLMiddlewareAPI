@@ -8,6 +8,6 @@ namespace OWLMiddleware.Models.Requests
         [JsonProperty("teamid")]
         public int teamId { get; set; }
         [JsonProperty("blipFormat")]
-        public bool blipFormat { get;set; }
+        public bool blipFormat = true;
     }
 }

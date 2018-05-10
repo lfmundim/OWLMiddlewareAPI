@@ -12,7 +12,6 @@ namespace OWLMiddleware.Models
                               ShanghaiDragons = 4408, SeoulDynasty = 4409, LondonSpitfire = 4410 };
         public enum DivisionIds { PacificDivision = 80, AtlanticDivision = 79, None = 0 };
         public enum Flow { Onboarding, MainMenu, MySchedule, News, Alerts, Standings};
-        // public enum ReturnFormat { Json, Blip };
         public static DivisionIds GetDivisionFromText(string text)
         {
             switch (text)

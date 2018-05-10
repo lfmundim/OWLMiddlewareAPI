@@ -15,6 +15,7 @@
   <ItemGroup>
     <PackageReference Include="Google.Cloud.Storage.V1" Version="2.1.0-beta01" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
     <PackageReference Include="RestEase" Version="1.4.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="2.4.0" />

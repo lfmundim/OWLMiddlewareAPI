@@ -11,5 +11,6 @@ namespace OWLMiddleware.Services
     {
         DocumentCollection CreateTeamsCarousel(List<CompetitorElement> teams);
         DocumentCollection CreateMatchCarousel(ScheduleResponse match);
+        DocumentCollection CreateNewsCarousel(NewsResponse news);
     }
 }
