@@ -38,7 +38,7 @@ namespace OWLMiddleware.Services
         /// </summary>
         /// <param name="newsAmmount"></param>
         /// <returns></returns>
-        [Get("news?pagesize={count}&page=1")]
+        [Get("news?pageSize={count}&page=1")]
         Task<NewsResponse> GetNewsAsync([Path("count")]int newsAmmount = 5);
     }
 }
