@@ -46,7 +46,7 @@ namespace OWLMiddleware.Controllers
         {
             try
             {
-                var news = await _owlApiService.GetNewsAsync(ammount-1);
+                var news = await _owlApiService.GetNewsAsync(ammount);
                 if (!isBlipFormat)
                     return Ok(news);
                 else
